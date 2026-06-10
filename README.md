@@ -1,0 +1,2 @@
+# Emerging-Technologies-Taxonomy-And-Frameworks
+Emerging Technologies are innovative and rapidly evolving technologies that have the potential to significantly transform industries, businesses, and society. Examples include Artificial Intelligence (AI), Generative AI, Agentic AI, Quantum Computing, Blockchain, Internet of Things (IoT),  Digital Twins, Edge Computing, and Robotics &amp; many more..
