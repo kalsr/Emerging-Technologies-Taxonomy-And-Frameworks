@@ -4,78 +4,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kalsnet Emerging Technologies Taxonomy & Frameworks Hub</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Kalsnet Emerging Technologies Taxonomy & Frameworks Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0b1a2f;
-            color: white;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0b1a2f;
+        color: white;
 
-        header {
-            background: #102a43;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #00d4ff;
-            border-bottom: 2px solid #00d4ff;
-        }
+        /* 🔥 FIX: ensures full page scroll always works */
+        min-height: 100vh;
+        overflow-y: auto;
+    }
 
+    header {
+        background: #102a43;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: #00d4ff;
+        border-bottom: 2px solid #00d4ff;
+    }
+
+    .container {
+        display: grid;
+
+        /* 🔥 FIX: stable grid instead of auto-fit chaos */
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+        padding: 20px;
+
+        /* 🔥 FIX: prevents clipping of last rows */
+        min-height: 100%;
+        padding-bottom: 80px;
+    }
+
+    /* 🔥 RESPONSIVE FIX */
+    @media (max-width: 1100px) {
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
 
-        .card {
-            background: #132f4c;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.3);
-            transition: transform 0.2s;
+    @media (max-width: 700px) {
+        .container {
+            grid-template-columns: 1fr;
         }
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+    .card {
+        background: #132f4c;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 10px rgba(0, 212, 255, 0.3);
+        transition: transform 0.2s;
 
-        .card h3 {
-            color: #00d4ff;
-        }
+        /* 🔥 FIX: prevents overflow collapse */
+        min-height: 220px;
+    }
 
-        .card p {
-            font-size: 14px;
-            line-height: 1.4;
-        }
+    .card:hover {
+        transform: scale(1.03);
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #00d4ff;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+    .card h3 {
+        color: #00d4ff;
+    }
 
-        .btn:hover {
-            background: #00aacc;
-        }
+    .card p {
+        font-size: 14px;
+        line-height: 1.4;
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #102a43;
-            border-top: 1px solid #00d4ff;
-        }
-    </style>
+        /* 🔥 FIX: prevents weird text overflow */
+        word-wrap: break-word;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: #00d4ff;
+        color: black;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background: #00aacc;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #102a43;
+        border-top: 1px solid #00d4ff;
+    }
+</style>
 </head>
 
 <body>
@@ -85,6 +115,8 @@
 </header>
 
 <div class="container">
+
+
 
     <!-- App 1 -->
     <div class="card">
